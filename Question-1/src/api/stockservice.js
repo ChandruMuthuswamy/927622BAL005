@@ -1,5 +1,5 @@
 export async function fetchStocks() {
-  // New MOCK DATA for testing UI
+  
   return [
     {
       name: "Reliance Industries Ltd.",
