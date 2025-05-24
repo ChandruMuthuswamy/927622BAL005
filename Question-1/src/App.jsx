@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { fetchStocks } from './api/stockservice'
 import StockDetail  from './components/stockdetail'
-import Stocklist from './components/stocklist'
+import StockList from './components/stocklist';
 import './App.css'
 
 function App() {
@@ -35,7 +35,8 @@ if(error) return <div>Error: {error}</div>
           </li>
         ))}
       </ul>
-      <StockDetail stock = {selectedStock} />
+      <StockList stocks={stocks} onSelect={setSelectedStock} />
+      <StockDetail stock={selectedStock} />
     </div>
   )
 
